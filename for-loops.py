@@ -11,3 +11,5 @@ for n in range(10):
 for x in range(1, 11):
     print(x ** 3)
 
+for i in range(0, 101, 7):
+    print(i)
