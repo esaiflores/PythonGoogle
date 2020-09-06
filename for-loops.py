@@ -8,3 +8,6 @@ def factorial(n):
 for n in range(10):
     print(n, factorial(n))
 
+for x in range(1, 11):
+    print(x ** 3)
+
