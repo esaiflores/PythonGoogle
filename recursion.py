@@ -25,3 +25,17 @@ def count_users(group):
 print(count_users("sales"))  # Should be 3
 print(count_users("engineering"))  # Should be 8
 print(count_users("everyone"))  # Should be 18<\code>
+
+
+def sum_positive_numbers(n):
+    sum = 0
+    if n == 1:
+        return 1
+    else:
+        sum += n + sum_positive_numbers(n - 1)
+
+    return sum
+
+
+print(sum_positive_numbers(3))  # Should be 6
+print(sum_positive_numbers(5))  # Should be 15
