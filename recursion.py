@@ -71,3 +71,14 @@ print(digits(25))  # Should print 2
 print(digits(144))  # Should print 3
 print(digits(1000))  # Should print 4
 print(digits(0))  # Should print 1
+
+
+def multiplication_table(start, stop):
+    for x in range(start, stop + 1):
+        for y in range(start, stop + 1):
+            print(x * y, end=" ")
+        print()
+
+
+multiplication_table(1, 3)
+# Should print the multiplication table shown above
