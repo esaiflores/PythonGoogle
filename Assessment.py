@@ -30,4 +30,24 @@ print(format_address("1001 1st Ave"))
 # Should print: "house number 1001 on street named 1st Ave"
 
 print(format_address("55 North Center Drive"))
+
+
 # Should print "house number 55 on street named North Center Drive"
+
+def highlight_word(sentence, word):
+    ret = ""
+    l = len(word)
+    words = sentence.split()
+    for i, w in enumerate(words):
+        if w[:l] == word:
+            ret += w[:l].upper() + w[l:]
+        else:
+            ret += w
+        if i != len(words) - 1:
+            ret += " "
+    return ret
+
+
+print(highlight_word("Have a nice day", "nice"))
+print(highlight_word("Shhh, don't be so loud!", "loud"))
+print(highlight_word("Automating with Python is fun", "fun"))
