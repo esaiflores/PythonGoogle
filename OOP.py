@@ -26,3 +26,9 @@ class Server:
     def __str__(self):
         """Returns a string with the current load of the server"""
         return "{:.2f}%".format(self.load())
+
+
+server = Server()
+server.add_connection("192.168.1.1")
+
+print(server.load())
