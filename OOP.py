@@ -77,3 +77,7 @@ class LoadBalancing:
         """Returns a string with the load for each server."""
         loads = [str(server) for server in self.servers]
         return "[{}]".format(",".join(loads))
+
+    l = LoadBalancing()
+l.add_connection("fdca:83d2::f20d")
+print(l.avg_load())
