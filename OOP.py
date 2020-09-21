@@ -81,3 +81,6 @@ class LoadBalancing:
     l = LoadBalancing()
 l.add_connection("fdca:83d2::f20d")
 print(l.avg_load())
+
+l.servers.append(Server())
+print(l.avg_load())
