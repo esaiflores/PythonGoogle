@@ -56,3 +56,24 @@ class LoadBalancing:
             if connection_id in server.connections:
                 server.close_connection(connection_id)
                 break
+
+
+    def avg_load(self):
+        """Calculates the average load of all servers"""
+        # Sum the load of each server and divide by the amount of servers
+        total_load = 0
+        total_server = 0
+        for server in self.servers:
+            total_load += server.load()
+            total_server += 1
+        return total_load/total_server
+
+    def ensure_availability(self):
+        """If the average load is higher than 50, spin up a new server"""
+        if self.avg_load() > 50:
+            self.servers.append(Server())
+
+    def __str__(self):
+        """Returns a string with the load for each server."""
+        loads = [str(server) for server in self.servers]
+        return "[{}]".format(",".join(loads))
