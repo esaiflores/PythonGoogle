@@ -99,3 +99,6 @@ print(l.avg_load())
 
 l.add_connection(connection)
 print(l)
+
+
+print(l.avg_load())
