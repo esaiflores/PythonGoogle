@@ -96,3 +96,6 @@ print(l.avg_load())
 
 l.close_connection("fdca:83d2::f20d")
 print(l.avg_load())
+
+l.add_connection(connection)
+print(l)
