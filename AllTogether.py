@@ -42,3 +42,5 @@ class Event:
 
 
 print(users)
+
+generate_report(users)
